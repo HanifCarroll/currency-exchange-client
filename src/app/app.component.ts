@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'currency-exchange-client';
+  @ViewChild('drawer') drawer;
+ 
+  toggleSideNav() {
+    this.drawer.toggle()
+  }
 }
+

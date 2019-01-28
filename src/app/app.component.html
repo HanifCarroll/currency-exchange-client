@@ -3,7 +3,8 @@
 <mat-toolbar>
 
     <mat-toolbar color="primary">
-        <span>Application Title</span>
+ 
+        <span>The Great Currency Exchange</span>
       
         <!-- This fills the remaining space of the current row -->
         <span class="example-fill-remaining-space"></span>
@@ -21,8 +22,9 @@
     </ul>
   </mat-sidenav>
   <mat-sidenav-content>
+      <button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
     <router-outlet>
-      <p><button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+       
     </router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
