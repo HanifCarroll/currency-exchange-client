@@ -8,11 +8,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { HeaderComponent } from './header/header.component';
 import {MatIconModule} from '@angular/material/icon';
-
+import { CreateAccountComponent } from './create-account/create-account.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    CreateAccountComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +22,8 @@ import {MatIconModule} from '@angular/material/icon';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
