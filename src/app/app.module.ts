@@ -14,9 +14,14 @@ import { HeaderComponent } from './header/header.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { HomeComponent } from './home/home.component';
 import { EditAccountComponent } from './edit-account/edit-account.component';
+import { ExchangeComponent } from './exchange/exchange.component';
+import {MatSelectModule} from '@angular/material/select';
+import { HistoricalDataComponent } from './historical-data/historical-data.component';
+import {MatTableModule} from '@angular/material/table';
+
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, CreateAccountComponent, HomeComponent, EditAccountComponent],
+  declarations: [AppComponent, HeaderComponent, CreateAccountComponent, HomeComponent, EditAccountComponent, ExchangeComponent, HistoricalDataComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -26,7 +31,9 @@ import { EditAccountComponent } from './edit-account/edit-account.component';
     MatIconModule,
     MatFormFieldModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent],
