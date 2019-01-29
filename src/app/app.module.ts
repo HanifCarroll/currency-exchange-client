@@ -4,18 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 import { HeaderComponent } from './header/header.component';
-import {MatIconModule} from '@angular/material/icon';
 import { CreateAccountComponent } from './create-account/create-account.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { HomeComponent } from './home/home.component';
+import { EditAccountComponent } from './edit-account/edit-account.component';
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    CreateAccountComponent
-  ],
+  declarations: [AppComponent, HeaderComponent, CreateAccountComponent, HomeComponent, EditAccountComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -23,9 +24,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
