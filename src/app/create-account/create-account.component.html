@@ -9,7 +9,9 @@
         <input matInput placeholder="Contact Email" type="email" />
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Date of Birth" type="date" />
+        <input matInput [matDatepicker]="picker" placeholder="Date of Birth" />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
       <mat-form-field>
         <input matInput placeholder="Password" type="password" />
