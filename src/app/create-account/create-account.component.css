@@ -18,11 +18,16 @@ h2 {
 }
 
 h2 {
-  text-align: center; 
+  text-align: center;
 }
-
 
 .left > *,
 .right > * {
   width: 80%;
+}
+
+.mat-flat-button {
+  max-width: 50%;
+  margin: 20px auto 0 auto;
+  height: 50px;
 }
