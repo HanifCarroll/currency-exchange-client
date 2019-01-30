@@ -1,17 +1,15 @@
-h2{
-    color: blue;
-    padding-left: 150px;
+h2 {
+  text-align: center;
+  color: rgb(61, 61, 61);
 }
 
-.from-currency, .to-currency {
-    display: flex;
-    align-items: center;
-    padding-left: 60px;
+.from-currency,
+.to-currency {
+  display: flex;
+  align-items: center;
 }
 
-.dropdown1, .dropdown2 {
-    position: absolute;
-   
-    left:250px;
-    padding-left: 60px;
+.dropdown1,
+.dropdown2 {
+  margin-left: 30px;
 }

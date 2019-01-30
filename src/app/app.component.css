@@ -36,5 +36,9 @@ a {
 .content {
   width: 90%;
   margin: 0 auto;
-  margin-bottom: 30px;
+  height: 100vh;
+}
+
+.sidenav-container {
+  background-color: #fafafa;
 }

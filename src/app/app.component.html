@@ -5,12 +5,14 @@
   <a routerLink="" class="menu-link"><span>Currency Exchange</span></a>
   <span class="example-fill-remaining-space"></span>
 
-  <a (click)="dialogService.openDialog()" class="menu-link login"><span>Login</span></a>
+  <a (click)="dialogService.openDialog()" class="menu-link login"
+    ><span>Login</span></a
+  >
 </mat-toolbar>
 
 <mat-drawer-container>
-  <mat-drawer #sidenav mode="side" opened>
-    <ul class="sidenav">
+  <mat-drawer class="sidenav-container" #sidenav mode="side" opened>
+    <ul class="sidenav-links">
       <li><a routerLink="exchange"> Currency Exchange </a></li>
       <li><a routerLink="historical-data">Exchange Trends</a></li>
       <li><a routerLink="account"> Account </a></li>
