@@ -13,6 +13,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -51,6 +52,7 @@ import { DialogService } from './dialog.service';
     MatDialogModule,
     MatNativeDateModule,
     MatDatepickerModule,
+    FormsModule,
   ],
   providers: [DialogService, MatDatepickerModule],
   bootstrap: [AppComponent],
