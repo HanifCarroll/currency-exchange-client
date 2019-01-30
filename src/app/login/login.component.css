@@ -1,0 +1,28 @@
+h2 {
+  color: rgb(61, 61, 61);
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up {
+  font-size: 0.7em;
+}
+
+.sign-up-container {
+  margin-top: 25px;
+  text-align: center;
+}
+
+button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.mat-flat-button {
+  height: 50px;
+  margin-top: 25px;
+}
