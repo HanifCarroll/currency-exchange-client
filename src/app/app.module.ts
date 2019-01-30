@@ -15,13 +15,23 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { HomeComponent } from './home/home.component';
 import { EditAccountComponent } from './edit-account/edit-account.component';
 import { ExchangeComponent } from './exchange/exchange.component';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 import { HistoricalDataComponent } from './historical-data/historical-data.component';
-import {MatTableModule} from '@angular/material/table';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, CreateAccountComponent, HomeComponent, EditAccountComponent, ExchangeComponent, HistoricalDataComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    CreateAccountComponent,
+    HomeComponent,
+    EditAccountComponent,
+    ExchangeComponent,
+    HistoricalDataComponent,
+    LoginComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -33,9 +43,11 @@ import {MatTableModule} from '@angular/material/table';
     MatButtonModule,
     MatInputModule,
     MatSelectModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
+  entryComponents: [LoginComponent],
 })
 export class AppModule {}

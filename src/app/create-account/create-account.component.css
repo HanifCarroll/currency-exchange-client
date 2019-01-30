@@ -6,3 +6,12 @@
 .create-account > * {
   width: 100%;
 }
+
+.fields {
+  display: flex;
+}
+
+.left > *,
+.right > * {
+  width: 80%;
+}

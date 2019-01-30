@@ -1,9 +1,40 @@
 .example-fill-remaining-space {
-    /* This fills the remaining space, by using flexbox. 
+  /* This fills the remaining space, by using flexbox. 
        Every toolbar row uses a flexbox row layout. */
-    flex: 1 1 auto;
-  }
+  flex: 1 1 auto;
+}
 
 .menu-icon {
-   cursor: pointer;
+  padding-top: 10px;
+  margin-right: 3px;
+  cursor: pointer;
+}
+
+.login {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0 15px;
+}
+
+li {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: navy;
+}
+
+.menu-link {
+  color: white;
+}
+
+.content {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }

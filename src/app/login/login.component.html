@@ -1,0 +1,14 @@
+<form class="login">
+  <h2>Login</h2>
+  <mat-form-field> <input matInput placeholder="Email" /> </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Password" type="password" />
+  </mat-form-field>
+  <button mat-flat-button color="primary">Login</button>
+</form>
+
+<div class="sign-up-container">
+  <a routerLink="create-account" class="sign-up" (click)="closeDialog()"
+    >Not a member? Sign up!</a
+  >
+</div>

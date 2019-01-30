@@ -1,0 +1,13 @@
+.login {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up {
+  font-size: 0.7em;
+}
+
+.sign-up-container {
+  margin-top: 15px;
+  text-align: center;
+}
