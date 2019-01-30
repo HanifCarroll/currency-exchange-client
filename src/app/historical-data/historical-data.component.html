@@ -1,30 +1,44 @@
+<h2>Historical Data Table</h2>
+
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
 
   <!-- Year Column -->
-  <ng-container matColumnDef="year">
-    <th mat-header-cell *matHeaderCellDef> Year </th>
-    <td mat-cell *matCellDef="let element"> {{element.year}} </td>
-  </ng-container>
+  <select>
+    <ng-container matColumnDef="year">
+      <th mat-header-cell *matHeaderCellDef> Year </th>
+      <td mat-cell *matCellDef="let element"> {{element.year}} </td>
+    </ng-container>
+  </select>
 
   <!-- From Column -->
-  <ng-container matColumnDef="from">
-    <th mat-header-cell *matHeaderCellDef> From </th>
-    <td mat-cell *matCellDef="let element"> {{element.from}} </td>
+  <ng-container matColumnDef="USD">
+    <th mat-header-cell *matHeaderCellDef> USD </th>
+    <td mat-cell *matCellDef="let element"> {{element.USD}} </td>
   </ng-container>
 
   <!-- To Column -->
-  <ng-container matColumnDef="to">
-    <th mat-header-cell *matHeaderCellDef> To </th>
-    <td mat-cell *matCellDef="let element"> {{element.to}} </td>
+  <ng-container matColumnDef="pound">
+    <th mat-header-cell *matHeaderCellDef> Pound </th>
+    <td mat-cell *matCellDef="let element"> {{element.pound}} </td>
   </ng-container>
 
   <!-- Rate Column -->
-  <ng-container matColumnDef="rate">
-    <th mat-header-cell *matHeaderCellDef> Rate </th>
-    <td mat-cell *matCellDef="let element"> {{element.rate}} </td>
+  <ng-container matColumnDef="Euro">
+    <th mat-header-cell *matHeaderCellDef> Euro </th>
+    <td mat-cell *matCellDef="let element"> {{element.Euro}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Yen">
+    <th mat-header-cell *matHeaderCellDef> Yen </th>
+    <td mat-cell *matCellDef="let element"> {{element.Yen}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Peso">
+    <th mat-header-cell *matHeaderCellDef> Peso </th>
+    <td mat-cell *matCellDef="let element"> {{element.Peso}} </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

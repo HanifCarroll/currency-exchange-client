@@ -1,35 +1,56 @@
 
-<p>
-  <mat-form-field appearance="outline">
-    <input matInput placeholder="Amount">
-    
-  </mat-form-field>
-</p>
-<mat-form-field>
-  <select matNativeControl required>
-    <option value="volvo">Dollar</option>
-    <option value="saab">Euro</option>
-    <option value="mercedes">Yen</option>
-    <option value="audi">Peso</option>
-  </select>
-</mat-form-field>
-<p>
-  <mat-form-field appearance="outline">
-    <input matInput placeholder="Amount">
-  </mat-form-field>
-</p>
+  <h2>Currency Exchange </h2>
+  <div class="from-currency">
+    <p id="amount1">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Amount">
+      </mat-form-field>
+    </p>
+    <div class="dropdown1">
+      <mat-form-field>
+        <select matNativeControl required>
+          <option value="dollar">Dollar</option>
+          <option value="dollar">Pound</option>
+          <option value="Euro">Euro</option>
+          <option value="yen">Yen</option>
+          <option value="peso">Peso</option>
 
+          <!--
+            <select>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select>
+          -->
+        </select>
+      </mat-form-field>
+      <br>
+    </div>
+  </div>
+  <div class="to-currency">
+    <p id="amount2">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Amount">
+      </mat-form-field>
+    </p>
+    <div class="dropdown2">
+      <mat-form-field>
+        <select matNativeControl required>
+          <option value="dollar">Dollar</option>
+          <option value="Euro">Euro</option>
+          <option value="yen">Yen</option>
+          <option value="peso">Peso</option>
+        </select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div align="centere">
+ 
 
+  
 
-<!--  Drop down -->
+  <!--  Drop down -->
+  
 
-<br>
-
-<mat-form-field>
-  <select matNativeControl required>
-    <option value="volvo">Dollar</option>
-    <option value="saab">Euro</option>
-    <option value="mercedes">Yen</option>
-    <option value="audi">Peso</option>
-  </select>
-</mat-form-field>
+</div>
