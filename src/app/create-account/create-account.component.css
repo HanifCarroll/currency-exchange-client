@@ -9,7 +9,13 @@
 
 .fields {
   display: flex;
+  text-align: center;
 }
+
+h2 {
+  text-align: center; 
+}
+
 
 .left > *,
 .right > * {
