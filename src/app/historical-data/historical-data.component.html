@@ -1,4 +1,14 @@
 <h2>Historical Data Table</h2>
+<div class="dropdown">
+    <mat-form-field class="drop">
+      <mat-select placeholder="Select a Currency" disableRipple>
+        <mat-option value="dollar">Dollar ($)</mat-option>
+        <mat-option value="pound">Pound (£)</mat-option>
+        <mat-option value="euro">Euro (€)</mat-option>
+        <mat-option value="yen">Yen (¥)</mat-option>
+        <mat-option value="peso">Peso ($)</mat-option>
+      </mat-select>
+    </mat-form-field>
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -15,29 +25,29 @@
 
   <!-- From Column -->
   <ng-container matColumnDef="USD">
-    <th mat-header-cell *matHeaderCellDef> USD </th>
+    <th mat-header-cell *matHeaderCellDef> USD ($)</th>
     <td mat-cell *matCellDef="let element"> {{element.USD}} </td>
   </ng-container>
 
   <!-- To Column -->
   <ng-container matColumnDef="pound">
-    <th mat-header-cell *matHeaderCellDef> Pound </th>
+    <th mat-header-cell *matHeaderCellDef> Pound (£)</th>
     <td mat-cell *matCellDef="let element"> {{element.pound}} </td>
   </ng-container>
 
   <!-- Rate Column -->
   <ng-container matColumnDef="Euro">
-    <th mat-header-cell *matHeaderCellDef> Euro </th>
+    <th mat-header-cell *matHeaderCellDef> Euro (€)</th>
     <td mat-cell *matCellDef="let element"> {{element.Euro}} </td>
   </ng-container>
 
   <ng-container matColumnDef="Yen">
-    <th mat-header-cell *matHeaderCellDef> Yen </th>
+    <th mat-header-cell *matHeaderCellDef> Yen (¥)</th>
     <td mat-cell *matCellDef="let element"> {{element.Yen}} </td>
   </ng-container>
 
   <ng-container matColumnDef="Peso">
-    <th mat-header-cell *matHeaderCellDef> Peso </th>
+    <th mat-header-cell *matHeaderCellDef> Peso ($)</th>
     <td mat-cell *matCellDef="let element"> {{element.Peso}} </td>
   </ng-container>
 
