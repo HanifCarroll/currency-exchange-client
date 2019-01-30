@@ -11,3 +11,18 @@ h2 {
 .edit-account > * {
   width: 100%;
 }
+
+.fields {
+  display: flex;
+  text-align: center;
+}
+
+.left > *,
+.right > * {
+  width: 80%;
+}
+
+h2 {
+  text-align: center; 
+}
+

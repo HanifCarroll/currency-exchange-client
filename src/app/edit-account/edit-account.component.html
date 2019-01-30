@@ -1,22 +1,36 @@
 <form class="edit-account">
   <h2>Edit Account Details</h2>
-  <mat-form-field>
+  <div class="fields">
+    <div class="left">
+<mat-form-field>
     <input matInput placeholder="First Name">
   </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="Last Name">
-  </mat-form-field>
-  <mat-form-field>
+    <mat-form-field>
     <input matInput placeholder="Contact Email" type="email">
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="Paypal Email" type="email">
   </mat-form-field>
   <mat-form-field>
     <input matInput placeholder="Date of Birth" type="date">
   </mat-form-field>
   <mat-form-field>
+    <input matInput placeholder="Change Password" type="password">
+  </mat-form-field>
+    </div>
+    <div class="right">
+  <mat-form-field>
+    <input matInput placeholder="Last Name">
+  </mat-form-field>
+    <mat-form-field>
+    <input matInput placeholder="Paypal Email" type="email">
+  </mat-form-field>
+  <mat-form-field>
     <input matInput placeholder="Country">
   </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Confirm Password" type="password" />
+  </mat-form-field>
+    </div>
+  </div>
+  
   <button mat-flat-button color="primary">Save Changes</button>
+
 </form>
