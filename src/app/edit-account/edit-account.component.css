@@ -24,6 +24,7 @@ h2 {
 
 h2 {
   text-align: center;
+  color: rgb(61, 61, 61);
 }
 
 .mat-flat-button {
@@ -31,3 +32,16 @@ h2 {
   margin: 20px auto 0 auto;
   height: 50px;
 }
+
+table {
+  width: 100%;
+}
+
+.accountTable {
+  padding-bottom: 30px;
+ /* text-align: center;*/
+}
+
+
+
+
