@@ -11,3 +11,9 @@
   margin-top: 15px;
   text-align: center;
 }
+
+button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}

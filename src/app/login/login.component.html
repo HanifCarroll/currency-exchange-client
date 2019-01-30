@@ -8,7 +8,6 @@
 </form>
 
 <div class="sign-up-container">
-  <a routerLink="create-account" class="sign-up" (click)="closeDialog()"
-    >Not a member? Sign up!</a
-  >
+  <button routerLink="create-account" class="sign-up"
+  [mat-dialog-close]="true">Not a member? Sign up!</button>
 </div>

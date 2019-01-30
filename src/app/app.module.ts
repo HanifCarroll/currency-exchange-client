@@ -20,6 +20,7 @@ import { HistoricalDataComponent } from './historical-data/historical-data.compo
 import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
 import { LoginComponent } from './login/login.component';
+import { DialogService } from './dialog.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { LoginComponent } from './login/login.component';
     MatTableModule,
     MatDialogModule,
   ],
-  providers: [],
+  providers: [DialogService],
   bootstrap: [AppComponent],
   entryComponents: [LoginComponent],
 })

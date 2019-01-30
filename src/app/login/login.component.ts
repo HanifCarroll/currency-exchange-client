@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DialogService } from '../dialog.service';
 
 @Component({
   selector: 'app-login',
@@ -11,5 +12,6 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
+
 
 }
