@@ -9,7 +9,7 @@
     </p>
     <div class="dropdown1">
       <mat-form-field appearance="outline">
-        <select matNativeControl required>
+        <select matNativeControl required id="from" onchange="convertCurrency();">
           <option value="dollar" selected>Dollar ($)</option>
           <option value="pound">Pound (£)</option>
           <option value="euro">Euro (€)</option>
@@ -29,7 +29,7 @@
     </p>
     <div class="dropdown2">
       <mat-form-field appearance="outline">
-        <select matNativeControl required>
+        <select matNativeControl required id="to" onchange="convertCurrency();">
           <option value="dollar">Dollar ($)</option>
           <option value="pound">Pound (£)</option>
           <option value="euro" selected>Euro (€)</option>
