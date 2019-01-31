@@ -1,0 +1,67 @@
+<form class="account-form" [formGroup]="accountForm" (ngSubmit)="saveChanges()">
+  <div class="fields">
+    <div class="left">
+      <mat-form-field>
+        <input matInput placeholder="First Name" formControlName="firstName" />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Contact Email"
+          type="email"
+          formControlName="contactEmail"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          placeholder="Date of Birth"
+          formControlName="birthday"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Password"
+          type="password"
+          formControlName="password"
+        />
+      </mat-form-field>
+    </div>
+    <div class="right">
+      <mat-form-field>
+        <input matInput placeholder="Last Name" formControlName="lastName" />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Paypal Email"
+          type="email"
+          formControlName="paypalEmail"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Country" formControlName="country" />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Confirm Password"
+          type="password"
+          formControlName="passwordConfirm"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+  <button
+    mat-flat-button
+    color="primary"
+    type="submit"
+    [disabled]="!accountForm.valid"
+  >
+    {{ buttonText }}
+  </button>
+</form>

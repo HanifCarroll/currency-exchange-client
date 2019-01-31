@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-export interface PeriodicElement {
+export interface HistoricalData {
   year: number;
   USD: string;
   pound: string;
@@ -9,7 +9,7 @@ export interface PeriodicElement {
   Peso: String;
   
 }
-const ELEMENT_DATA: PeriodicElement[] = [
+const ELEMENT_DATA: HistoricalData[] = [
   {year: 2019, USD: '1', pound: '0.56', Euro: '0.78', Yen:'3.6',Peso:'78'},
   {year: 2018, USD: '1', pound: '0.63', Euro: '1.01', Yen:'3.7',Peso:'100'},
   {year: 2017, USD: '1', pound: '0.78', Euro: '0.95', Yen:'3.9',Peso:'120'},

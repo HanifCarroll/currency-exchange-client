@@ -13,9 +13,9 @@ import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { HistoricalDataComponent } from './historical-data/historical-data.component';
 import { HomeComponent } from './home/home.component';
 import { ExchangeComponent } from './exchange/exchange.component';
@@ -24,17 +24,18 @@ import { EditAccountComponent } from './edit-account/edit-account.component';
 import { LoginComponent } from './login/login.component';
 
 import { DialogService } from './dialog.service';
+import { AccountFormComponent } from './account-form/account-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     CreateAccountComponent,
     HomeComponent,
     EditAccountComponent,
     ExchangeComponent,
     HistoricalDataComponent,
     LoginComponent,
+    AccountFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +52,8 @@ import { DialogService } from './dialog.service';
     MatDialogModule,
     MatNativeDateModule,
     MatDatepickerModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [DialogService, MatDatepickerModule],
   bootstrap: [AppComponent],
