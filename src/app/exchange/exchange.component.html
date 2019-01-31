@@ -1,40 +1,42 @@
-<h2>Currency Exchange</h2>
 
-<div class="from-currency">
-  <p id="amount1">
-    <mat-form-field appearance="outline">
-      <input matInput placeholder="Amount" />
-    </mat-form-field>
-  </p>
-  <div class="dropdown1">
-    <mat-form-field>
-      <select matNativeControl required>
-        <option value="dollar">Dollar ($)</option>
-        <option value="pound">Pound (£)</option>
-        <option value="euro">Euro (€)</option>
-        <option value="yen">Yen (¥)</option>
-        <option value="peso">Peso ($)</option>
-      </select>
-    </mat-form-field>
-    <br />
+  <h2>Currency Exchange</h2>
+  <div id="box">
+  <div class="from-currency">
+    <p id="amount1">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Amount" value="1" />
+      </mat-form-field>
+    </p>
+    <div class="dropdown1">
+      <mat-form-field appearance="outline">
+        <select matNativeControl required>
+          <option value="dollar" selected>Dollar ($)</option>
+          <option value="pound">Pound (£)</option>
+          <option value="euro">Euro (€)</option>
+          <option value="yen">Yen (¥)</option>
+          <option value="peso">Peso ($)</option>
+        </select>
+      </mat-form-field>
+      <br />
+    </div>
   </div>
-</div>
 
-<div class="to-currency">
-  <p id="amount2">
-    <mat-form-field appearance="outline">
-      <input matInput placeholder="Amount" />
-    </mat-form-field>
-  </p>
-  <div class="dropdown2">
-    <mat-form-field>
-      <select matNativeControl required>
-        <option value="dollar">Dollar ($)</option>
-        <option value="pound">Pound (£)</option>
-        <option value="euro">Euro (€)</option>
-        <option value="yen">Yen (¥)</option>
-        <option value="peso">Peso ($)</option>
-      </select>
-    </mat-form-field>
+  <div class="to-currency">
+    <p id="amount2">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Amount" disabled />
+      </mat-form-field>
+    </p>
+    <div class="dropdown2">
+      <mat-form-field appearance="outline">
+        <select matNativeControl required>
+          <option value="dollar">Dollar ($)</option>
+          <option value="pound">Pound (£)</option>
+          <option value="euro" selected>Euro (€)</option>
+          <option value="yen">Yen (¥)</option>
+          <option value="peso">Peso ($)</option>
+        </select>
+      </mat-form-field>
+    </div>
   </div>
 </div>
