@@ -3,45 +3,11 @@ h2 {
   color: rgb(61, 61, 61);
 }
 
-.edit-account {
-  display: flex;
-  flex-direction: column;
-}
-
-.edit-account > * {
-  width: 100%;
-}
-
-.fields {
-  display: flex;
-  text-align: center;
-}
-
-.left > *,
-.right > * {
-  width: 80%;
-}
-
-h2 {
-  text-align: center;
-  color: rgb(61, 61, 61);
-}
-
-.mat-flat-button {
-  max-width: 50%;
-  margin: 20px auto 0 auto;
-  height: 50px;
-}
-
 table {
   width: 100%;
 }
 
 .accountTable {
   padding-bottom: 30px;
- /* text-align: center;*/
+  /* text-align: center;*/
 }
-
-
-
-

@@ -2,28 +2,3 @@ h2 {
   text-align: center;
   color: rgb(61, 61, 61);
 }
-
-.create-account {
-  display: flex;
-  flex-direction: column;
-}
-
-.create-account > * {
-  width: 100%;
-}
-
-.fields {
-  display: flex;
-  text-align: center;
-}
-
-.left > *,
-.right > * {
-  width: 80%;
-}
-
-.mat-flat-button {
-  max-width: 50%;
-  margin: 20px auto 0 auto;
-  height: 50px;
-}

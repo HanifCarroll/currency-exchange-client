@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create-account',
@@ -8,22 +9,5 @@ import { Component, OnInit } from '@angular/core';
 export class CreateAccountComponent implements OnInit {
   constructor() {}
 
-  formFields = {
-    firstName: '',
-    lastName: '',
-    contactEmail: '',
-    paypalEmail: '',
-    birthday: '',
-    country: '',
-    password: '',
-    passwordConfirm: '',
-  };
-
   ngOnInit() {}
-
-  saveChanges() {
-    if (this.formFields.password !== this.formFields.passwordConfirm) {
-      console.log('No match');
-    }
-  }
 }
