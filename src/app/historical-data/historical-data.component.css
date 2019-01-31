@@ -6,6 +6,14 @@ table {
   width: 100%;
 }
 
+.trendTable {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
 .drop {
 padding-bottom: 20px;
+}
+.mat-header-cell {
+  text-align:center
 }

@@ -99,8 +99,17 @@
 
 <hr />
 <h2>Account Transaction Details</h2>
+<div class="dropdown">
+    <mat-form-field class="drop">
+      <mat-select placeholder="Select a Currency" disableRipple>
+        <mat-option value="dollar">Dollar ($)</mat-option>
+        <mat-option value="pound">Pound (£)</mat-option>
+        <mat-option value="euro">Euro (€)</mat-option>
+        <mat-option value="yen">Yen (¥)</mat-option>
+        <mat-option value="peso">Peso ($)</mat-option>
+      </mat-select>
+    </mat-form-field>
 
-<!--Need to insert tabs/dropdown-->
 <div class="accountTable">
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <!-- id Column -->
