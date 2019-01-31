@@ -4,13 +4,13 @@
   <div class="from-currency">
     <p id="amount1">
       <mat-form-field appearance="outline">
-        <input matInput placeholder="Amount" value="1" />
+        <input matInput placeholder="Amount" value="1" [(ngModel)]="amount" />
       </mat-form-field>
     </p>
     <div class="dropdown1">
       <mat-form-field appearance="outline">
-        <select matNativeControl required>
-          <option value="dollar" selected>Dollar ($)</option>
+        <select matNativeControl required [(ngModel)]="from">
+          <option value="usd" selected>Dollar ($)</option>
           <option value="pound">Pound (£)</option>
           <option value="euro">Euro (€)</option>
           <option value="yen">Yen (¥)</option>
@@ -24,13 +24,13 @@
   <div class="to-currency">
     <p id="amount2">
       <mat-form-field appearance="outline">
-        <input matInput placeholder="Amount" disabled />
+        <input matInput placeholder="Amount" [value]="httpService.result" disabled />
       </mat-form-field>
     </p>
     <div class="dropdown2">
       <mat-form-field appearance="outline">
-        <select matNativeControl required>
-          <option value="dollar">Dollar ($)</option>
+        <select matNativeControl required [(ngModel)]="to">
+          <option value="usd">Dollar ($)</option>
           <option value="pound">Pound (£)</option>
           <option value="euro" selected>Euro (€)</option>
           <option value="yen">Yen (¥)</option>
@@ -38,5 +38,10 @@
         </select>
       </mat-form-field>
     </div>
+
   </div>
+  
 </div>
+<div class="buttonContainer">   
+<button mat-flat-button type="button" color="primary" (click)="calculateResult(from, to, amount)">Convert</button>
+</div> 

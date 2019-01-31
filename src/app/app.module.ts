@@ -14,6 +14,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HistoricalDataComponent } from './historical-data/historical-data.component';
@@ -24,6 +25,7 @@ import { EditAccountComponent } from './edit-account/edit-account.component';
 import { LoginComponent } from './login/login.component';
 
 import { DialogService } from './dialog.service';
+import { HttpService } from './http.service';
 import { AccountFormComponent } from './account-form/account-form.component';
 
 @NgModule({
@@ -54,8 +56,9 @@ import { AccountFormComponent } from './account-form/account-form.component';
     MatDatepickerModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule
   ],
-  providers: [DialogService, MatDatepickerModule],
+  providers: [DialogService, MatDatepickerModule, HttpService],
   bootstrap: [AppComponent],
   entryComponents: [LoginComponent],
 })
