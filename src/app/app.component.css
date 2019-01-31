@@ -26,7 +26,7 @@ li {
 
 a {
   text-decoration: none;
-  color: navy;
+  color: white;
 }
 
 .menu-link {
@@ -39,5 +39,5 @@ a {
 }
 
 .sidenav-container {
-  background-color: #fafafa;
+  background-color: #3f51b5;
 }

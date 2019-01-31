@@ -5,11 +5,11 @@
         <mat-option value="dollar">Dollar ($)</mat-option>
         <mat-option value="pound">Pound (£)</mat-option>
         <mat-option value="euro">Euro (€)</mat-option>
-        <mat-option value="yen">Yen (¥)</mat-option>
+        <mat-option value="yen">Yen (¥)</mat-option>  
         <mat-option value="peso">Peso ($)</mat-option>
       </mat-select>
     </mat-form-field>
-
+<div class="trendTable">
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
   <!--- Note that these columns can be defined in any order.
@@ -54,4 +54,5 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+</div>
 
