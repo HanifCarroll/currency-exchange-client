@@ -18,18 +18,11 @@
       </mat-form-field>
       <br />
     </div>
-    <div class="amount1">
+    <p id="amount1">
       <mat-form-field appearance="outline">
-        <input
-          matInput
-          placeholder="Amount"
-          value="1"
-          min="0"
-          type="number"
-          [(ngModel)]="amount"
-        />
+        <input matInput placeholder="Amount" [(ngModel)]="amount" />
       </mat-form-field>
-    </div>
+    </p>
   </div>
 
   <div class="to-currency">
@@ -45,7 +38,7 @@
         </select>
       </mat-form-field>
     </div>
-    <div class="amount2">
+    <p id="amount2">
       <mat-form-field appearance="outline">
         <input
           matInput
@@ -54,7 +47,7 @@
           disabled
         />
       </mat-form-field>
-    </div>
+    </p>
   </div>
 </div>
 <div class="buttonContainer">
