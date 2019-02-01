@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-exchange',
@@ -7,7 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExchangeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpService: HttpService) { }
+  from
+  to
+  amount
+
+
+  calculateResult(from, to, amount) {
+    from = from.toLowerCase()
+    to = to.toLowerCase()
+   return this.httpService.getCalculation(from, to, amount)
+
+    
+  }
 
   ngOnInit() {
   }
