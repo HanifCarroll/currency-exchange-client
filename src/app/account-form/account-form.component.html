@@ -1,3 +1,4 @@
+<!--Form to edit customer account information-->
 <form class="account-form" [formGroup]="accountForm" (ngSubmit)="saveChanges()">
   <div class="fields">
     <div class="left">
@@ -68,6 +69,7 @@
     type="submit"
     [disabled]="!accountForm.valid || !checkEqualPasswords()"
   >
+    <!--Validation to disable button if any of the fields are not valid-->
     {{ buttonText }}
   </button>
 </form>
