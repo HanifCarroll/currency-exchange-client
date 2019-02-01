@@ -16,7 +16,7 @@
     </div>
     <div class="amount1">
         <mat-form-field appearance="outline">
-          <input matInput placeholder="Amount" value="1" [(ngModel)]="amount" />
+          <input matInput placeholder="Amount" value="1" min="0" type="number" [(ngModel)]="amount" />
         </mat-form-field>
       </div>
   </div>
@@ -41,5 +41,5 @@
   
 </div>
 <div class="buttonContainer">   
-<button mat-flat-button type="button" color="primary" (click)="calculateResult(from, to, amount)">Convert</button>
+<button mat-flat-button type="button" color="primary" [disabled]='amount<0' (click)="calculateResult(from, to, amount)">Convert</button>
 </div> 
