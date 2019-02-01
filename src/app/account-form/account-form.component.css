@@ -1,8 +1,10 @@
+/*Styling of the header text*/
 h2 {
   text-align: center;
   color: rgb(61, 61, 61);
 }
 
+/*Styling to display location of button according to the form*/
 .account-form {
   display: flex;
   flex-direction: column;
@@ -12,16 +14,18 @@ h2 {
   width: 100%;
 }
 
+/*Styling to allow direction and column view of form*/
 .fields {
   display: flex;
   text-align: center;
 }
-
+/*Styling for spacing, size and location of each field in the form */
 .left > *,
 .right > * {
   width: 80%;
 }
 
+/*Styling of the button*/
 .mat-flat-button {
   max-width: 50%;
   margin: 20px auto 0 auto;
