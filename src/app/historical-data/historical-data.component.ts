@@ -9,6 +9,7 @@ export interface HistoricalData {
   Peso: String;
   
 }
+//This is the table which we can automate if we have the right data.
 const ELEMENT_DATA: HistoricalData[] = [
   {year: 2019, USD: '1', pound: '0.56', Euro: '0.78', Yen:'3.6',Peso:'78'},
   {year: 2018, USD: '1', pound: '0.63', Euro: '1.01', Yen:'3.7',Peso:'100'},
