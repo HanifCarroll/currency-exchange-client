@@ -1,45 +1,68 @@
-
-  <h2>Currency Exchange</h2>
-  <div id="box">
+<h2>Currency Exchange</h2>
+<div id="box">
   <div class="from-currency">
     <div class="dropdown1">
       <mat-form-field appearance="outline">
-        <select matNativeControl required [(ngModel)]="from">
-          <option value="usd">Dollar ($)</option>
-          <option value="pound">Pound (£)</option>
-          <option value="euro">Euro (€)</option>
-          <option value="yen">Yen (¥)</option>
-          <option value="peso">Peso ($)</option>
+        <select
+          (change)="onSelect($event.target.value)"
+          matNativeControl
+          required
+          [(ngModel)]="from"
+        >
+          <option
+            *ngFor="let currency of currencies"
+            [value]="currency.value"
+            >{{ currency.text }}</option
+          >
         </select>
       </mat-form-field>
       <br />
     </div>
     <div class="amount1">
-        <mat-form-field appearance="outline">
-          <input matInput placeholder="Amount" value="1" min="0" type="number" [(ngModel)]="amount" />
-        </mat-form-field>
-      </div>
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          placeholder="Amount"
+          value="1"
+          min="0"
+          type="number"
+          [(ngModel)]="amount"
+        />
+      </mat-form-field>
+    </div>
   </div>
   <div class="to-currency">
     <div class="dropdown2">
       <mat-form-field appearance="outline">
         <select matNativeControl required [(ngModel)]="to">
-          <option value="usd">Dollar ($)</option>
-          <option value="pound">Pound (£)</option>
-          <option value="euro">Euro (€)</option>
-          <option value="yen">Yen (¥)</option>
-          <option value="peso">Peso ($)</option>
+          <option
+            *ngFor="let currency of availableCurrencies"
+            [value]="currency.value"
+            >{{ currency.text }}</option
+          >
         </select>
       </mat-form-field>
     </div>
     <div class="amount2">
-        <mat-form-field appearance="outline">
-          <input matInput placeholder="Amount" [value]="httpService.result" disabled />
-        </mat-form-field>
-      </div>
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          placeholder="Amount"
+          [value]="httpService.result"
+          disabled
+        />
+      </mat-form-field>
+    </div>
   </div>
-  
 </div>
-<div class="buttonContainer">   
-<button mat-flat-button type="button" color="primary" [disabled]='amount<0' (click)="calculateResult(from, to, amount)">Convert</button>
-</div> 
+<div class="buttonContainer">
+  <button
+    mat-flat-button
+    type="button"
+    color="primary"
+    [disabled]="amount < 0"
+    (click)="calculateResult(from, to, amount)"
+  >
+    Convert
+  </button>
+</div>
