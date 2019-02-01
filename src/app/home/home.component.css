@@ -1,4 +1,10 @@
 /* Application-wide Styles */
+
+/* In the page the header level h1 is color blue #3f51b5
+    The header level h1 is centered on the page.
+    The text uses font-family of Arial, Helvetica, or sans-serif.
+    The font-size is 150% */
+    
 h1 {
     color: #3f51b5;
     text-align: center;
@@ -6,6 +12,11 @@ h1 {
     font-size: 150%;
   }
 
+ /* In the page the header levels (h2 and h3) are color black
+    The text uses font-family of Arial, Helvetica, or sans-serif.
+    The margins are set to 0. 
+    The font-weight is lighter
+    The header levels (h2 and h3) are underlined*/
 h2, h3 {
     color:black;
     font-family: Arial, Helvetica, sans-serif;
@@ -14,11 +25,17 @@ h2, h3 {
     margin: 0;
   }
 
-   /* The following three lines removes line spacing 
-     between header levels (h3, h5) and paragraphs (p) */
+/* The following lines removes line spacing 
+   between header levels (h3, h5) and paragraphs (p) */
   #prime h3, h5, p  {
     display: inline;
   } 
+
+  /*In the page body, text, and buttons are color black
+    The text uses font-family of Cambria or Georgia.
+    The margins are set to 2em. An em is equal to the current 
+    font-size, for instance, if the font-size of the document 
+    is 12pt, 1em is equal to 12pt.*/
 
   body, input[type="text"], button {
     color:black;
@@ -26,10 +43,11 @@ h2, h3 {
     margin: 2em;
   }
 
-  /* everywhere else */
+
+  /* The indicated fonts are used everywhere else (indicated by asterisk wildcard *)that has not already been defined.*/
   * {
     font-family: Arial, Helvetica, sans-serif;
-  }
+    }
   
  
 
