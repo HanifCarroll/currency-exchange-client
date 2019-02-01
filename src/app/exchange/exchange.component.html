@@ -2,19 +2,21 @@
   <h2>Currency Exchange</h2>
   <div id="box">
   <div class="from-currency">
-    <p id="amount1">
-      <mat-form-field appearance="outline">
-        <input matInput placeholder="Amount" value="1" [(ngModel)]="amount" />
-      </mat-form-field>
-    </p>
+    <!-- Adding dropdown from which currency conversion-->
     <div class="dropdown1">
       <mat-form-field appearance="outline">
-        <select matNativeControl required [(ngModel)]="from">
-          <option value="usd" selected>Dollar ($)</option>
-          <option value="pound">Pound (£)</option>
-          <option value="euro">Euro (€)</option>
-          <option value="yen">Yen (¥)</option>
-          <option value="peso">Peso ($)</option>
+        <select
+          (change)="onSelect($event.target.value)"
+          matNativeControl
+          required
+          [(ngModel)]="from"
+        >
+        <!-- Adding loop for validating from which currency the conversion to be done -->
+          <option
+            *ngFor="let currency of currencies"
+            [value]="currency.value"
+            > {{ currency.text }} </option>
+          
         </select>
       </mat-form-field>
       <br />
@@ -29,12 +31,26 @@
     </p>
     <div class="dropdown2">
       <mat-form-field appearance="outline">
+<<<<<<< HEAD
         <select matNativeControl required [(ngModel)]="to">
           <option value="usd">Dollar ($)</option>
           <option value="pound">Pound (£)</option>
           <option value="euro" selected>Euro (€)</option>
           <option value="yen">Yen (¥)</option>
           <option value="peso">Peso ($)</option>
+=======
+<<<<<<< HEAD
+        <select matNativeControl required [(ngModel)]="to">
+          <!-- Adding loop for validating to which currency the conversion to be done -->
+=======
+        <select matNativeControl required id="to" onchange="convertCurrency();">
+>>>>>>> 9ea9928a0facbfe2211706bbff8f3fec530d4e2b
+          <option
+            *ngFor="let currency of availableCurrencies"
+            [value]="currency.value"
+            >{{ currency.text }}</option
+          >
+>>>>>>> 2ca86b988465acc3fa1469c658a2a17442d79f8e
         </select>
       </mat-form-field>
     </div>
@@ -42,6 +58,21 @@
   </div>
   
 </div>
+<<<<<<< HEAD
 <div class="buttonContainer">   
 <button mat-flat-button type="button" color="primary" (click)="calculateResult(from, to, amount)">Convert</button>
 </div> 
+=======
+<div class="buttonContainer">
+  <!--Submitting the changes to the server-->
+  <button
+    mat-flat-button
+    type="button"
+    color="primary"
+    [disabled]="amount < 0"
+    (click)="calculateResult(from, to, amount)"
+  >
+    Convert
+  </button>
+</div>
+>>>>>>> 2ca86b988465acc3fa1469c658a2a17442d79f8e
