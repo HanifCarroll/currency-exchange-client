@@ -1,14 +1,9 @@
-
-  <h2>Currency Exchange</h2>
-  <div id="box">
+<h2>Currency Exchange</h2>
+<div id="box">
   <div class="from-currency">
-    <p id="amount1">
-      <mat-form-field appearance="outline">
-        <input matInput placeholder="Amount" value="1" [(ngModel)]="amount" />
-      </mat-form-field>
-    </p>
     <div class="dropdown1">
       <mat-form-field appearance="outline">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <select matNativeControl required id="from" onchange="convertCurrency();">
           <option value="dollar" selected>Dollar ($)</option>
@@ -20,18 +15,37 @@
           <option value="euro">Euro (€)</option>
           <option value="yen">Yen (¥)</option>
           <option value="peso">Peso ($)</option>
+=======
+        <select
+          (change)="onSelect($event.target.value)"
+          matNativeControl
+          required
+          [(ngModel)]="from"
+        >
+          <option
+            *ngFor="let currency of currencies"
+            [value]="currency.value"
+            >{{ currency.text }}</option
+          >
+>>>>>>> ae11a374cbf418d9b9f9dada96c8e1efda60d9ee
         </select>
       </mat-form-field>
       <br />
     </div>
-  </div>
-
-  <div class="to-currency">
-    <p id="amount2">
+    <div class="amount1">
       <mat-form-field appearance="outline">
-        <input matInput placeholder="Amount" [value]="httpService.result" disabled />
+        <input
+          matInput
+          placeholder="Amount"
+          value="1"
+          min="0"
+          type="number"
+          [(ngModel)]="amount"
+        />
       </mat-form-field>
-    </p>
+    </div>
+  </div>
+  <div class="to-currency">
     <div class="dropdown2">
       <mat-form-field appearance="outline">
 <<<<<<< HEAD
@@ -39,19 +53,43 @@
           <option value="dollar">Dollar ($)</option>
 =======
         <select matNativeControl required [(ngModel)]="to">
+<<<<<<< HEAD
           <option value="usd">Dollar ($)</option>
 >>>>>>> 995a2572ebe857e6801a2c94549ef8e966f93dd9
           <option value="pound">Pound (£)</option>
           <option value="euro" selected>Euro (€)</option>
           <option value="yen">Yen (¥)</option>
           <option value="peso">Peso ($)</option>
+=======
+          <option
+            *ngFor="let currency of availableCurrencies"
+            [value]="currency.value"
+            >{{ currency.text }}</option
+          >
+>>>>>>> ae11a374cbf418d9b9f9dada96c8e1efda60d9ee
         </select>
       </mat-form-field>
     </div>
-
+    <div class="amount2">
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          placeholder="Amount"
+          [value]="httpService.result"
+          disabled
+        />
+      </mat-form-field>
+    </div>
   </div>
-  
 </div>
-<div class="buttonContainer">   
-<button mat-flat-button type="button" color="primary" (click)="calculateResult(from, to, amount)">Convert</button>
-</div> 
+<div class="buttonContainer">
+  <button
+    mat-flat-button
+    type="button"
+    color="primary"
+    [disabled]="amount < 0"
+    (click)="calculateResult(from, to, amount)"
+  >
+    Convert
+  </button>
+</div>

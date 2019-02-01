@@ -2,9 +2,17 @@
   <span class="menu-icon" mat-raised-button (click)="sidenav.toggle()">
     <mat-icon>menu</mat-icon>
   </span>
-  <a routerLink="" class="menu-link"><span>Blue Team Currency Exchange </span></a>
-  
-  <img class="money-logo" src="../../assets/images/moneyLogo.png" alt="Blue Money" height="50" width="50">
+  <a routerLink="" class="menu-link"
+    ><span>Blue Team Currency Exchange </span></a
+  >
+
+  <img
+    class="money-logo"
+    src="../../assets/images/moneyLogo.png"
+    alt="Blue Money"
+    height="50"
+    width="50"
+  />
   <span class="example-fill-remaining-space"></span>
 
   <a (click)="dialogService.openDialog()" class="menu-link login"
@@ -15,6 +23,7 @@
 <mat-drawer-container>
   <mat-drawer class="sidenav-container" #sidenav mode="side" opened>
     <ul class="sidenav-links">
+      <li><a routerLink="">Home</a></li>
       <li><a routerLink="exchange"> Currency Exchange </a></li>
       <li><a routerLink="historical-data">Exchange Trends</a></li>
       <li><a routerLink="account"> Account </a></li>
