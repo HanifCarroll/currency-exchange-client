@@ -1,6 +1,7 @@
 <h2>Currency Exchange</h2>
 <div id="box">
   <div class="from-currency">
+    <!-- Adding dropdown from which currency conversion-->
     <div class="dropdown1">
       <mat-form-field appearance="outline">
         <select
@@ -9,11 +10,12 @@
           required
           [(ngModel)]="from"
         >
+        <!-- Adding loop for validating from which currency the conversion to be done -->
           <option
             *ngFor="let currency of currencies"
             [value]="currency.value"
-            >{{ currency.text }}</option
-          >
+            > {{ currency.text }} </option>
+          
         </select>
       </mat-form-field>
       <br />
@@ -31,10 +33,16 @@
       </mat-form-field>
     </div>
   </div>
+
   <div class="to-currency">
     <div class="dropdown2">
       <mat-form-field appearance="outline">
+<<<<<<< HEAD
         <select matNativeControl required [(ngModel)]="to">
+          <!-- Adding loop for validating to which currency the conversion to be done -->
+=======
+        <select matNativeControl required id="to" onchange="convertCurrency();">
+>>>>>>> 9ea9928a0facbfe2211706bbff8f3fec530d4e2b
           <option
             *ngFor="let currency of availableCurrencies"
             [value]="currency.value"
@@ -56,6 +64,7 @@
   </div>
 </div>
 <div class="buttonContainer">
+  <!--Submitting the changes to the server-->
   <button
     mat-flat-button
     type="button"
