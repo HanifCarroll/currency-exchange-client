@@ -9,8 +9,8 @@ import { HttpService } from '../http.service';
 export class ExchangeComponent implements OnInit {
 
   constructor(private httpService: HttpService) { }
-  from
-  to
+  from = 'usd'
+  to = 'euro'
   amount
 
 

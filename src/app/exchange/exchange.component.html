@@ -2,15 +2,10 @@
   <h2>Currency Exchange</h2>
   <div id="box">
   <div class="from-currency">
-    <p id="amount1">
-      <mat-form-field appearance="outline">
-        <input matInput placeholder="Amount" value="1" [(ngModel)]="amount" />
-      </mat-form-field>
-    </p>
     <div class="dropdown1">
       <mat-form-field appearance="outline">
         <select matNativeControl required [(ngModel)]="from">
-          <option value="usd" selected>Dollar ($)</option>
+          <option value="usd">Dollar ($)</option>
           <option value="pound">Pound (£)</option>
           <option value="euro">Euro (€)</option>
           <option value="yen">Yen (¥)</option>
@@ -19,26 +14,29 @@
       </mat-form-field>
       <br />
     </div>
+    <div class="amount1">
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Amount" value="1" [(ngModel)]="amount" />
+        </mat-form-field>
+      </div>
   </div>
-
   <div class="to-currency">
-    <p id="amount2">
-      <mat-form-field appearance="outline">
-        <input matInput placeholder="Amount" [value]="httpService.result" disabled />
-      </mat-form-field>
-    </p>
     <div class="dropdown2">
       <mat-form-field appearance="outline">
         <select matNativeControl required [(ngModel)]="to">
           <option value="usd">Dollar ($)</option>
           <option value="pound">Pound (£)</option>
-          <option value="euro" selected>Euro (€)</option>
+          <option value="euro">Euro (€)</option>
           <option value="yen">Yen (¥)</option>
           <option value="peso">Peso ($)</option>
         </select>
       </mat-form-field>
     </div>
-
+    <div class="amount2">
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Amount" [value]="httpService.result" disabled />
+        </mat-form-field>
+      </div>
   </div>
   
 </div>
