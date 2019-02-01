@@ -37,8 +37,12 @@
   <div class="to-currency">
     <div class="dropdown2">
       <mat-form-field appearance="outline">
+<<<<<<< HEAD
         <select matNativeControl required [(ngModel)]="to">
           <!-- Adding loop for validating to which currency the conversion to be done -->
+=======
+        <select matNativeControl required id="to" onchange="convertCurrency();">
+>>>>>>> 9ea9928a0facbfe2211706bbff8f3fec530d4e2b
           <option
             *ngFor="let currency of availableCurrencies"
             [value]="currency.value"

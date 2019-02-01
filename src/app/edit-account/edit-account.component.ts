@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Time } from '@angular/common';
 
+//Fields for account transaction table
 export interface AccountTrans {
   id: number;
   currencyFrom: string;
@@ -9,6 +9,7 @@ export interface AccountTrans {
   dateOfTransaction: string;
 }
 
+//Data inserted into Account transaction detail table
 const ELEMENT_DATA: AccountTrans[] = [
   {
     id: 9,

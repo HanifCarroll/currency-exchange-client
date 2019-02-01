@@ -1,9 +1,14 @@
 <h2>Edit Account Details</h2>
+
+<!--Edit Account form from account.form.component-->
 <app-account-form buttonText="Save Changes"></app-account-form>
 
 <hr />
+<!--Table to display customer transaction details-->
 <h2>Account Transaction Details</h2>
 <div class="dropdown">
+  <!--Drop down menu to view transaction details filtered by 
+    the currency being converted into-->
   <mat-form-field class="drop">
     <mat-select placeholder="Select a Currency" disableRipple>
       <mat-option value="dollar">Dollar ($)</mat-option>
@@ -13,7 +18,7 @@
       <mat-option value="peso">Peso ($)</mat-option>
     </mat-select>
   </mat-form-field>
-
+<!--Account Transaction Details Table-->
   <div class="accountTable">
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
       <!-- id Column -->
