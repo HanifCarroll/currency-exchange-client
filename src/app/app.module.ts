@@ -27,6 +27,7 @@ import { LoginComponent } from './login/login.component';
 import { DialogService } from './dialog.service';
 import { HttpService } from './http.service';
 import { AccountFormComponent } from './account-form/account-form.component';
+import { AccountsComponent } from './accounts/accounts.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { AccountFormComponent } from './account-form/account-form.component';
     HistoricalDataComponent,
     LoginComponent,
     AccountFormComponent,
+    AccountsComponent,
   ],
   imports: [
     BrowserModule,
